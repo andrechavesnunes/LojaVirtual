@@ -16,7 +16,7 @@ use Symfony\Component\VarDumper\Caster\Caster;
 use Symfony\Component\VarDumper\Cloner\Stub;
 
 /**
- * A Presenter service.
+ * A Presenters service.
  */
 class Presenter
 {
@@ -96,7 +96,7 @@ class Presenter
      *
      * @param mixed $value
      * @param int   $depth   (default: null)
-     * @param int   $options One of Presenter constants
+     * @param int   $options One of Presenters constants
      *
      * @return string
      */

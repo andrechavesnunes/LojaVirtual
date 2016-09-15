@@ -201,7 +201,7 @@ interface RepositoryInterface
     public function getFieldsSearchable();
 
     /**
-     * Set Presenter
+     * Set Presenters
      *
      * @param $presenter
      *
@@ -210,7 +210,7 @@ interface RepositoryInterface
     public function setPresenter($presenter);
 
     /**
-     * Skip Presenter Wrapper
+     * Skip Presenters Wrapper
      *
      * @param bool $status
      *

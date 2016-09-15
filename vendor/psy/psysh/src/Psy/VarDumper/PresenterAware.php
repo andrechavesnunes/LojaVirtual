@@ -12,13 +12,13 @@
 namespace Psy\VarDumper;
 
 /**
- * Presenter injects itself as a dependency to all objects which
+ * Presenters injects itself as a dependency to all objects which
  * implement PresenterAware.
  */
 interface PresenterAware
 {
     /**
-     * Set a reference to the Presenter.
+     * Set a reference to the Presenters.
      *
      * @param Presenter $presenter
      */

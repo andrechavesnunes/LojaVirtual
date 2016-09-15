@@ -80,7 +80,7 @@ class ArtisanServiceProvider extends ServiceProvider
         'AuthMake' => 'command.auth.make',
         'CacheTable' => 'command.cache.table',
         'ConsoleMake' => 'command.console.make',
-        'ControllerMake' => 'command.controller.make',
+        'ControllerMake' => 'command.controllers.make',
         'EventGenerate' => 'command.event.generate',
         'EventMake' => 'command.event.make',
         'JobMake' => 'command.job.make',
@@ -231,7 +231,7 @@ class ArtisanServiceProvider extends ServiceProvider
      */
     protected function registerControllerMakeCommand()
     {
-        $this->app->singleton('command.controller.make', function ($app) {
+        $this->app->singleton('command.controllers.make', function ($app) {
             return new ControllerMakeCommand($app['files']);
         });
     }

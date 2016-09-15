@@ -37,7 +37,7 @@ class EntityCommand extends Command
     public function fire()
     {
 
-        if ($this->confirm('Would you like to create a Presenter? [y|N]')) {
+        if ($this->confirm('Would you like to create a Presenters? [y|N]')) {
             $this->call('make:presenter', [
                 'name'    => $this->argument('name'),
                 '--force' => $this->option('force'),
@@ -59,7 +59,7 @@ class EntityCommand extends Command
 
         if ($this->confirm('Would you like to create a Controller? [y|N]')) {
 
-            // Generate a controller resource
+            // Generate a controllers resource
             $this->call('make:resource', [
                 'name'    => $this->argument('name'),
                 '--force' => $this->option('force')

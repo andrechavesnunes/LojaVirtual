@@ -48,11 +48,11 @@ final class KernelEvents
     const EXCEPTION = 'kernel.exception';
 
     /**
-     * The VIEW event occurs when the return value of a controller
+     * The VIEW event occurs when the return value of a controllers
      * is not a Response instance.
      *
      * This event allows you to create a response for the return value of the
-     * controller. The event listener method receives a
+     * controllers. The event listener method receives a
      * Symfony\Component\HttpKernel\Event\GetResponseForControllerResultEvent
      * instance.
      *
@@ -63,10 +63,10 @@ final class KernelEvents
     const VIEW = 'kernel.view';
 
     /**
-     * The CONTROLLER event occurs once a controller was found for
+     * The CONTROLLER event occurs once a controllers was found for
      * handling a request.
      *
-     * This event allows you to change the controller that will handle the
+     * This event allows you to change the controllers that will handle the
      * request. The event listener method receives a
      * Symfony\Component\HttpKernel\Event\FilterControllerEvent instance.
      *

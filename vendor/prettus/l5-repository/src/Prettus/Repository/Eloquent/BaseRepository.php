@@ -119,7 +119,7 @@ abstract class BaseRepository implements RepositoryInterface, RepositoryCriteria
     abstract public function model();
 
     /**
-     * Specify Presenter class name
+     * Specify Presenters class name
      *
      * @return string
      */
@@ -154,7 +154,7 @@ abstract class BaseRepository implements RepositoryInterface, RepositoryCriteria
     }
 
     /**
-     * Set Presenter
+     * Set Presenters
      *
      * @param $presenter
      *
@@ -838,7 +838,7 @@ abstract class BaseRepository implements RepositoryInterface, RepositoryCriteria
     }
 
     /**
-     * Skip Presenter Wrapper
+     * Skip Presenters Wrapper
      *
      * @param bool $status
      *

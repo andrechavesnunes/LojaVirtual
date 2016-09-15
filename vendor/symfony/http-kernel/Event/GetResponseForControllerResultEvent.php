@@ -40,9 +40,9 @@ class GetResponseForControllerResultEvent extends GetResponseEvent
     }
 
     /**
-     * Returns the return value of the controller.
+     * Returns the return value of the controllers.
      *
-     * @return mixed The controller return value
+     * @return mixed The controllers return value
      */
     public function getControllerResult()
     {
@@ -50,9 +50,9 @@ class GetResponseForControllerResultEvent extends GetResponseEvent
     }
 
     /**
-     * Assigns the return value of the controller.
+     * Assigns the return value of the controllers.
      *
-     * @param mixed $controllerResult The controller return value
+     * @param mixed $controllerResult The controllers return value
      */
     public function setControllerResult($controllerResult)
     {

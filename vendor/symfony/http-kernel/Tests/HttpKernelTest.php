@@ -182,7 +182,7 @@ class HttpKernelTest extends \PHPUnit_Framework_TestCase
     public function testHandleWhenTheControllerIsAnArray()
     {
         $dispatcher = new EventDispatcher();
-        $kernel = new HttpKernel($dispatcher, $this->getResolver(array(new Controller(), 'controller')));
+        $kernel = new HttpKernel($dispatcher, $this->getResolver(array(new Controller(), 'controllers')));
 
         $this->assertResponseEquals(new Response('foo'), $kernel->handle(new Request()));
     }

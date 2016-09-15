@@ -100,7 +100,7 @@ interface Paginator
     public function isEmpty();
 
     /**
-     * Render the paginator using a given Presenter.
+     * Render the paginator using a given Presenters.
      *
      * @param  \Illuminate\Contracts\Pagination\Presenter|null  $presenter
      * @return string

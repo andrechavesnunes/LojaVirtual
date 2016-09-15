@@ -13,7 +13,7 @@ class ControllerGenerator extends Generator
      *
      * @var string
      */
-    protected $stub = 'controller/controller';
+    protected $stub = 'controllers/controllers';
 
     /**
      * Get root namespace.

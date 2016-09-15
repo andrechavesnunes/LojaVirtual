@@ -11,14 +11,14 @@
 |
 */
 
-//$factory->define(CodeProject\Entities\User::class, function (Faker\Generator $faker) {
-//    return [
-//        'name' => $faker->name,
-//        'email' => $faker->safeEmail,
-//        'password' => bcrypt(str_random(10)),
-//        'remember_token' => str_random(10),
-//    ];
-//});
+$factory->define(CodeProject\Entities\User::class, function (Faker\Generator $faker) {
+    return [
+        'name'=>'andre',
+        'email'=>'andre.nunes@adcos.com.br',
+        'password'=> bcrypt('123456'),
+        'remember_token' => str_random(10),
+    ];
+});
 $factory->define(CodeProject\Entities\Client::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
@@ -32,7 +32,7 @@ $factory->define(CodeProject\Entities\Client::class, function (Faker\Generator $
 });
 $factory->define(CodeProject\Entities\Project::class, function (Faker\Generator $faker) {
         return [
-            'owner_id' =>8,
+            'owner_id' =>1,
             'client_id' =>random_int(1,1),
             'name' => $faker->word,
             'description' => $faker->sentence,
@@ -43,7 +43,7 @@ $factory->define(CodeProject\Entities\Project::class, function (Faker\Generator 
 });
 $factory->define(CodeProject\Entities\ProjectNote::class, function (Faker\Generator $faker) {
     return [
-        'project_id' =>rand(2,2),
+        'project_id' =>rand(3,22),
         'title' =>$faker->word,
         'note' => $faker->paragraph,
     ];

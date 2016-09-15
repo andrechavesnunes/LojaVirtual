@@ -276,9 +276,9 @@ class RequestDataCollector extends DataCollector implements EventSubscriberInter
     }
 
     /**
-     * Gets the controller.
+     * Gets the controllers.
      *
-     * @return string The controller as a string
+     * @return string The controllers as a string
      */
     public function getController()
     {

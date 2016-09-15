@@ -25,6 +25,7 @@ return array(
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateProjectsNotesTable' => $baseDir . '/database/migrations/2016_09_02_190856_create-projects-notes-table.php',
     'CreateProjectsTable' => $baseDir . '/database/migrations/2016_09_01_141243_create_projects_table.php',
+    'CreateTableProjectFiles' => $baseDir . '/database/migrations/2016_09_12_002627_create_table_project_files.php',
     'CreateTableProjectMembers' => $baseDir . '/database/migrations/2016_09_10_171035_create_table_project_members.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',

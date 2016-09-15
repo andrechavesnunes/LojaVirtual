@@ -66,6 +66,7 @@ class ComposerStaticInit45a48403e3bde4d0a3d1c3122c0d0344
         array (
             'LucaDegasperi\\OAuth2Server\\' => 27,
             'League\\OAuth2\\Server\\' => 21,
+            'League\\Fractal\\' => 15,
             'League\\Flysystem\\' => 17,
             'League\\Event\\' => 13,
         ),
@@ -201,6 +202,10 @@ class ComposerStaticInit45a48403e3bde4d0a3d1c3122c0d0344
         array (
             0 => __DIR__ . '/..' . '/league/oauth2-server/src',
         ),
+        'League\\Fractal\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/fractal/src',
+        ),
         'League\\Flysystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
@@ -305,6 +310,7 @@ class ComposerStaticInit45a48403e3bde4d0a3d1c3122c0d0344
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateProjectsNotesTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_02_190856_create-projects-notes-table.php',
         'CreateProjectsTable' => __DIR__ . '/../..' . '/database/migrations/2016_09_01_141243_create_projects_table.php',
+        'CreateTableProjectFiles' => __DIR__ . '/../..' . '/database/migrations/2016_09_12_002627_create_table_project_files.php',
         'CreateTableProjectMembers' => __DIR__ . '/../..' . '/database/migrations/2016_09_10_171035_create_table_project_members.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',

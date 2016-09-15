@@ -1000,7 +1000,7 @@ class Configuration
     }
 
     /**
-     * Get the Presenter service.
+     * Get the Presenters service.
      *
      * @return Presenter
      */

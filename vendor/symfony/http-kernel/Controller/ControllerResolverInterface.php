@@ -29,27 +29,27 @@ interface ControllerResolverInterface
      * Returns the Controller instance associated with a Request.
      *
      * As several resolvers can exist for a single application, a resolver must
-     * return false when it is not able to determine the controller.
+     * return false when it is not able to determine the controllers.
      *
      * The resolver must only throw an exception when it should be able to load
-     * controller but cannot because of some errors made by the developer.
+     * controllers but cannot because of some errors made by the developer.
      *
      * @param Request $request A Request instance
      *
      * @return callable|false A PHP callable representing the Controller,
-     *                        or false if this resolver is not able to determine the controller
+     *                        or false if this resolver is not able to determine the controllers
      *
-     * @throws \LogicException If the controller can't be found
+     * @throws \LogicException If the controllers can't be found
      */
     public function getController(Request $request);
 
     /**
-     * Returns the arguments to pass to the controller.
+     * Returns the arguments to pass to the controllers.
      *
      * @param Request  $request    A Request instance
      * @param callable $controller A PHP callable
      *
-     * @return array An array of arguments to pass to the controller
+     * @return array An array of arguments to pass to the controllers
      *
      * @throws \RuntimeException When value for argument given is not provided
      */

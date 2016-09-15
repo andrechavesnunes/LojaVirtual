@@ -35,9 +35,9 @@ class TraceableEventDispatcher extends BaseTraceableEventDispatcher
                 break;
             case KernelEvents::VIEW:
             case KernelEvents::RESPONSE:
-                // stop only if a controller has been executed
-                if ($this->stopwatch->isStarted('controller')) {
-                    $this->stopwatch->stop('controller');
+                // stop only if a controllers has been executed
+                if ($this->stopwatch->isStarted('controllers')) {
+                    $this->stopwatch->stop('controllers');
                 }
                 break;
             case KernelEvents::TERMINATE:
@@ -62,7 +62,7 @@ class TraceableEventDispatcher extends BaseTraceableEventDispatcher
     {
         switch ($eventName) {
             case KernelEvents::CONTROLLER:
-                $this->stopwatch->start('controller', 'section');
+                $this->stopwatch->start('controllers', 'section');
                 break;
             case KernelEvents::RESPONSE:
                 $token = $event->getResponse()->headers->get('X-Debug-Token');

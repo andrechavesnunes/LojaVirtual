@@ -30,7 +30,7 @@ class PresenterCommand extends Command
      *
      * @var string
      */
-    protected $type = 'Presenter';
+    protected $type = 'Presenters';
 
 
     /**
@@ -46,7 +46,7 @@ class PresenterCommand extends Command
                 'name'  => $this->argument('name'),
                 'force' => $this->option('force'),
             ]))->run();
-            $this->info("Presenter created successfully.");
+            $this->info("Presenters created successfully.");
 
             if (!\File::exists(app_path() . '/Transformers/' . $this->argument('name') . 'Transformer.php')) {
                 if ($this->confirm('Would you like to create a Transformer? [y|N]')) {

@@ -41,7 +41,7 @@ class TraceableControllerResolver implements ControllerResolverInterface
      */
     public function getController(Request $request)
     {
-        $e = $this->stopwatch->start('controller.get_callable');
+        $e = $this->stopwatch->start('controllers.get_callable');
 
         $ret = $this->resolver->getController($request);
 
@@ -55,7 +55,7 @@ class TraceableControllerResolver implements ControllerResolverInterface
      */
     public function getArguments(Request $request, $controller)
     {
-        $e = $this->stopwatch->start('controller.get_arguments');
+        $e = $this->stopwatch->start('controllers.get_arguments');
 
         $ret = $this->resolver->getArguments($request, $controller);
 

@@ -18,8 +18,8 @@ use Symfony\Component\HttpFoundation\Request;
  * ControllerResolver.
  *
  * This implementation uses the '_controller' request attribute to determine
- * the controller to execute and uses the request attributes to determine
- * the controller method arguments.
+ * the controllers to execute and uses the request attributes to determine
+ * the controllers method arguments.
  *
  * @author Fabien Potencier <fabien@symfony.com>
  */
@@ -41,13 +41,13 @@ class ControllerResolver implements ControllerResolverInterface
      * {@inheritdoc}
      *
      * This method looks for a '_controller' request attribute that represents
-     * the controller name (a string like ClassName::MethodName).
+     * the controllers name (a string like ClassName::MethodName).
      */
     public function getController(Request $request)
     {
         if (!$controller = $request->attributes->get('_controller')) {
             if (null !== $this->logger) {
-                $this->logger->warning('Unable to look for the controller as the "_controller" parameter is missing.');
+                $this->logger->warning('Unable to look for the controllers as the "_controller" parameter is missing.');
             }
 
             return false;
@@ -76,7 +76,7 @@ class ControllerResolver implements ControllerResolverInterface
         $callable = $this->createController($controller);
 
         if (!is_callable($callable)) {
-            throw new \InvalidArgumentException(sprintf('The controller for URI "%s" is not callable. %s', $request->getPathInfo(), $this->getControllerError($callable)));
+            throw new \InvalidArgumentException(sprintf('The controllers for URI "%s" is not callable. %s', $request->getPathInfo(), $this->getControllerError($callable)));
         }
 
         return $callable;
@@ -131,7 +131,7 @@ class ControllerResolver implements ControllerResolverInterface
     }
 
     /**
-     * Returns a callable for the given controller.
+     * Returns a callable for the given controllers.
      *
      * @param string $controller A Controller string
      *
@@ -142,7 +142,7 @@ class ControllerResolver implements ControllerResolverInterface
     protected function createController($controller)
     {
         if (false === strpos($controller, '::')) {
-            throw new \InvalidArgumentException(sprintf('Unable to find controller "%s".', $controller));
+            throw new \InvalidArgumentException(sprintf('Unable to find controllers "%s".', $controller));
         }
 
         list($class, $method) = explode('::', $controller, 2);
@@ -155,7 +155,7 @@ class ControllerResolver implements ControllerResolverInterface
     }
 
     /**
-     * Returns an instantiated controller.
+     * Returns an instantiated controllers.
      *
      * @param string $class A class name
      *
@@ -183,11 +183,11 @@ class ControllerResolver implements ControllerResolverInterface
         }
 
         if (!is_array($callable)) {
-            return sprintf('Invalid type for controller given, expected string or array, got "%s".', gettype($callable));
+            return sprintf('Invalid type for controllers given, expected string or array, got "%s".', gettype($callable));
         }
 
         if (2 !== count($callable)) {
-            return sprintf('Invalid format for controller, expected array(controller, method) or controller::method.');
+            return sprintf('Invalid format for controllers, expected array(controllers, method) or controllers::method.');
         }
 
         list($controller, $method) = $callable;

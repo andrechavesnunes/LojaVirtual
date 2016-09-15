@@ -6,7 +6,7 @@ use Prettus\Repository\Transformer\ModelTransformer;
 
 /**
  * Class ModelFractalPresenter
- * @package Prettus\Repositories\Presenter
+ * @package Prettus\Repositories\Presenters
  */
 class ModelFractalPresenter extends FractalPresenter
 {

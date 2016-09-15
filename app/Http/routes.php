@@ -15,7 +15,7 @@ use LucaDegasperi\OAuth2Server\Facades\Authorizer;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('app');
 });
 Route::post('oauth/access_token', function() {
     return Response::json(Authorizer::issueAccessToken());
@@ -33,6 +33,8 @@ Route::group(['middleware'=>'oauth'],function(){
 
         Route::get('{id}/note', 'ProjectNoteController@index');
         Route::get('{id}/note/{noteid}', 'ProjectNoteController@show');
+        Route::post('{id}/file/','ProjectFileController@store');
+
         Route::get('note/{id}/','ProjectController@destroy');
     });
 

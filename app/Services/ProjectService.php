@@ -11,16 +11,23 @@ namespace CodeProject\Services;
 
 use CodeProject\Repositories\ProjectRepository;
 use CodeProject\Validators\ProjectValidators;
+use Illuminate\Filesystem\Filesystem;
+use Illuminate\Contracts\Filesystem\Factory as Storage;
 use Prettus\Validator\Exceptions\ValidatorException;
 
 class ProjectService
 {
     protected $repository;
     protected $validator;
-    public function __construct(ProjectRepository $repository,ProjectValidators $validator)
+    protected $filesystem;
+    protected $storage;
+    public function __construct(ProjectRepository $repository,ProjectValidators $validator,Filesystem $filesystem
+    ,Storage $storage)
     {
         $this->repository = $repository;
         $this->validator = $validator;
+        $this->filesystem = $filesystem;
+        $this->storage = $storage;
     }
     public function create(array $data)
     {
@@ -41,5 +48,10 @@ class ProjectService
     public function update(array $data,$id)
     {
         return $this->repository->update($data,$id);
+    }
+    public function createFile(Array $data){
+        $project = $this->repository->skipPresenter()->find($data['project_id']);
+        $projectFile = $project->files()->create($data);
+        $this->storage->put($projectFile->id.'.'.$data['extension'],$this->filesystem->get($data['file']));
     }
 }

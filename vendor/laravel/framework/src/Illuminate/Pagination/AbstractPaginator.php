@@ -344,7 +344,7 @@ abstract class AbstractPaginator implements Htmlable
     }
 
     /**
-     * Set the default Presenter resolver.
+     * Set the default Presenters resolver.
      *
      * @param  \Closure  $resolver
      * @return void
